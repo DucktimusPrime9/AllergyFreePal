@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+ 
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: right;
+  padding: 5;
+  margin: 0;
+}
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+.nav a:hover {
+  background-color: #005f5f;
+}
+ 
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+ 
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+ 
+  /* Option 1 - Display Inline */
+  .nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+ 
+  /* Options 2 - Float
+  .nav li {
+    float: left;
+  }
+  .nav ul {
+    overflow: auto;
+    width: 600px;
+    margin: 0 auto;
+  }
+  .nav {
+    background-color: #444;
+  }
+  */
+}
+	
+#regForm {
+  background-color: #ffffff;
+	  background: rgba(0, 0, 0, 0.4);
+  margin: 10px auto;
+  font-family: Raleway;
+	color:white;
+  padding: 30px;
+  width: 70%;
+  min-width: 300px;
+}
+
+.h1 {
+  text-align: center;
+	font-size: 3em;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+	
+.verticalcenter
+	{
+    display: table-cell;
+    height: 400px;
+    vertical-align: middle;
+	}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margxin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 8000px;
+  margin: 0 auto;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  top: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.4); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 50px;
+}
+.container-1{
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+.container-1 input#search{
+  width: 300px;
+  height: 50px;
+  background: #rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #63717f;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.container-1 input#search::-webkit-input-placeholder {
+   color: #65737e;
+}
+ 
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+   color: #65737e;  
+}
+ 
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #65737e;  
+}
+ 
+.container-1 input#search:-ms-input-placeholder {  
+   color: #65737e;  
+}
+	
+.container-1 .icon{
+  position: absolute;
+  top: 0;
+  margin-left: 17px;
+  margin-top: 17px;
+  z-index: 1;
+  color: #4f5b66;
+}
+</style>
+
+</head>
+
+ <body class="news">
+  <header>
+    <div class="nav">
+      <ul>
+        <li class="home"><a href="index.html">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li class="tutorials"><a href="maps.html">Maps&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li class="about"><a class="active" a href="#">Allergies&nbsp;&nbsp;</a></li>
+      </ul>
+    </div>
+  </header>
+</body>
+	
+<body background="food.jpg">
+<div class="bgimg-1">
+
+  <div class="caption">
+	  
+  </div>
+
+</div>
+	
+<div class="container">
+  <div class="box">
+</div>
+  <div class="content">
+    <h1>Allergy Free Pal</h1>
+    <p>According to FARE, Food Allergy Research and Education, here are the 8 most common food allergies among people. Note that any food type has the potential to cause an allergice reaction. If you suspect an allergic reaction, please seek immediate emergency medical attention.</p>
+  </div>
+</div>
+</body>
+
+</html>
