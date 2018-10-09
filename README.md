@@ -15,11 +15,11 @@ The person in charge will submit the final deliverable either before or on the d
 The team will be using platforms like PivotalTracker to manage and track our work, GitHub to collaboratively work on the development procedure and NetBeans as IDE.
 
 # Role in Project
-Project Manager； shivani Singh
-Project Assistance: Hang Shi
-Front-End developer: lupe Delgado
-UI/UX: lupe Delgado
-Back-End developer: Junhao Shen
+Project Manage: shivani Singh 
+Project Assistance: Hang Shi 
+Front-End developer: lupe Delgado 
+UI/UX: lupe Delgado 
+Back-End developer: Junhao Shen 
 Tester: Peng Ge
 
 # Use case design
