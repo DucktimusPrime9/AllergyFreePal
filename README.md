@@ -34,11 +34,16 @@ Express.js
 
 
 # Components Interaction Diagram v2.0
-
+![Image text](https://raw.github.com/DucktimusPrime9/repositpry/master/AllergyFreePal/image lib/CID1.png)
 
 # State Transition Diagrams 
 
 001 Registration_v2.1
+![Image text](https://raw.github.com/DucktimusPrime9/repositpry/master/AllergyFreePal/image lib/STD1.png)
+
 002 Logging into an Account_v2.1
+![Image text](https://raw.github.com/DucktimusPrime9/repositpry/master/AllergyFreePal/image lib/STD2.png)
+
 005 Advance Search_v2.0
+![Image text](https://raw.github.com/DucktimusPrime9/repositpry/master/AllergyFreePal/image lib/STD3.png)
 
