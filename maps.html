@@ -1,60 +1,68 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Maps</title>
+    <meta charset="UTF-8">
+    <title>Maps</title>
 </head>
 <style>
-	html, body, iframe { height: 97%; background-color: #699DAF }
+html,
+body,
+iframe {
+    height: 97%;
+    background-color: #699DAF
+}
+
 .nav ul {
-  list-style: none;
-  background-color: #444;
-  background: rgba(0, 0, 0, 0.6);
-  text-align: right;
-  padding: 5;
-  margin: 0;
+    list-style: none;
+    background-color: #444;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: right;
+    padding: 5;
+    margin: 0;
 }
+
 .nav li {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 40px;
-  border-bottom: 1px solid #888;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 40px;
+    border-bottom: 1px solid #888;
 }
- 
+
 .nav a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-  transition: .3s background-color;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: .3s background-color;
 }
- 
+
 .nav a:hover {
-  background-color: #005f5f;
+    background-color: #005f5f;
 }
- 
+
 .nav a.active {
-  background-color: #fff;
-  color: #444;
-  cursor: default;
+    background-color: #fff;
+    color: #444;
+    cursor: default;
 }
- 
+
 @media screen and (min-width: 600px) {
-  .nav li {
-    width: 120px;
-    border-bottom: none;
-    height: 50px;
-    line-height: 50px;
-    font-size: 1.4em;
-  }
- 
-  /* Option 1 - Display Inline */
-  .nav li {
-    display: inline-block;
-    margin-right: -4px;
-  }
- 
-  /* Options 2 - Float
+    .nav li {
+        width: 120px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+    }
+
+    /* Option 1 - Display Inline */
+    .nav li {
+        display: inline-block;
+        margin-right: -4px;
+    }
+
+    /* Options 2 - Float
   .nav li {
     float: left;
   }
@@ -69,23 +77,21 @@
   */
 }
 </style>
-	
- <body class="news">
-  <header>
-    <div class="nav">
-      <ul>
-        <li class="home"><a href="index.html">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-        <li class="tutorials"><a class="active" a href="#">Maps&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-        <li class="about"><a href="allergies.html">Allergies&nbsp;&nbsp;</a></li>
-      </ul>
-    </div>
-  </header>
+
+<body class="news">
+    <header>
+        <div class="nav">
+            <ul>
+                <li class="home"><a href="index.html">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="tutorials"><a class="active" a href="#">Maps&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li class="about"><a href="allergies.html">Allergies&nbsp;&nbsp;</a></li>
+            </ul>
+        </div>
+    </header>
 </body>
-	
+
 <body>
-	
-<iframe width="70%" frameborder="0" style="border:0" align="right"
-src="https://www.google.com/maps/embed/v1/place?q=boston%20university&key=AIzaSyAUey1dCyU8FmiyxR-kSEY7sljqj5Gq0d8" allowfullscreen></iframe>	
-	
+    <iframe width="70%" frameborder="0" style="border:0" align="right" src="https://www.google.com/maps/embed/v1/place?q=boston%20university&key=AIzaSyAUey1dCyU8FmiyxR-kSEY7sljqj5Gq0d8" allowfullscreen></iframe>
 </body>
+
 </html>
