@@ -26,18 +26,23 @@
         <div align="center">
             <div class="container-1">
                 <div class="verticalcenter"></div>
-                <form id="regForm" action="/action_page.php">
-                    <div class="h1">Restaurant Finder</div>
-                    Find allergy-friendly<br>restaurants near you!
-                    <div class="tab">
-                        <p><input placeholder="Enter your zip code" oninput="this.className = ''" name="fname"></p>
-                        <div class="col">
-                            <% allergies.forEach(function(allergy) { %>
-                            <input name="allergies" type="checkbox" value="<%= allergy.name %>"><%= allergy.name %>
-                            <% }); %>
-                        </div>
+            <form id="regForm" action="/action_page.php">
+                <div class="h1">Restaurant Finder</div>
+                Find allergy-friendly<br>restaurants near you!
+                <div class="tab">
+                    <p><input placeholder="Enter your zip code" oninput="this.className = ''" name="fname"></p>
+                    <div class="col">
+                        <input name="allergies" type="checkbox" value="gluten">Gluten
+                        <input name="allergies" type="checkbox" value="peanuts">Peanuts
+                        <input name="allergies" type="checkbox" value="soy">Soy
+                        <input name="allergies" type="checkbox" value="milk">Milk
+                        <input name="allergies" type="checkbox" value="nuts">Tree Nuts
+                        <input name="allergies" type="checkbox" value="egg">Eggs
+                        <input name="allergies" type="checkbox" value="fish">Fish
+                        <input name="allergies" type="checkbox" value="shellfish">Shellfish
                     </div>
-                </form>
+                </div>
+            </form>
                 <script>
                 showTab(0);
 
