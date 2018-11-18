@@ -5,7 +5,7 @@
     <% include ../partials/head %>
 </head>
 
-<body class="container" background="/food.jpg">
+<body class="container-fluid" background="/food.jpg">
     <header>
         <% include ../partials/header %>
     </header>
@@ -26,12 +26,15 @@
             <div class="container-1">
                 <div class="verticalcenter"></div>
                 <div class="h1">Restaurant Finder</div>
+                <!-- there is a bug, I don't know why data cannot be rendered, try to fix it -->
                 Find allergy-friendly<br>restaurants near you!
                 <div class="tab">
                     <div class="col">
                         <% allergysources.forEach(function(allergy) { %>
-                        <input name="allergies" type="checkbox" value="<%= allergy.name %>"><%= allergy.name %> 
-                        <% }); %>
+                        <h2 value="<%= allergy.name %>"><%= allergy.name %> </h2>
+                        <%for(var i = 0; i< allergy.food_eg.length; i++){%>
+                        <p> <%= allergy.food_eg[i]%></p>
+                        <% }}); %>
                     </div>
                 </div>
             </div>

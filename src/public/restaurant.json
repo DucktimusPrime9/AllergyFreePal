@@ -1,0 +1,22 @@
+[
+    {
+        "rest_id": 01,
+        "name": "Mala",
+        "menu": [
+        {
+            "food_id": 01,
+            "name": "YangZhou Fried Rice",
+            "components": ["chicken", "beef", "egg"],
+            "price": 9.95
+        },
+        {
+        	"food_id":02,
+        	"name": "Lamb Mala Pot",
+        	"components": ["lamb", "mushroom","tofu", "rice noodles"],
+        	"price":9.95
+        }]
+	},
+	{
+		"rest_id":"",
+    	"name":
+}]

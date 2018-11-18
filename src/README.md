@@ -22,8 +22,8 @@ localhost:8080
 ├── server.js\
 └── views\
     ├── pages\
-    │   ├── about.ejs\
-    │   ├── allergies.ejs\
+│   ├── about.ejs\
+│   ├── allergies.ejs\
     │   ├── index.ejs\
     │   └── maps.ejs\
     └── partials\

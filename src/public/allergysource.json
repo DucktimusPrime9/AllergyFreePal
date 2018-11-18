@@ -1,8 +1,10 @@
 [
-    {
-        "name": "milk",
-        "food_eg": ["butter", "buttermilk"]},
-    {
-        "name": "peanut",
-        "food_eg": ["artificial nuts", "beer nuts"]}
-]
+{
+    "name": "milk",
+    "food_eg": ["butter", "buttermilk"],
+    "detail": "some detail about"
+},
+{
+    "name": "peanut",
+    "food_eg": ["artificial nuts", "beer nuts"]
+}]

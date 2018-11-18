@@ -1,7 +1,6 @@
 #regForm {
   background-color: #ffffff;
-    background: rgba(0, 0, 0, 0.4);
-  
+  background: rgba(0, 0, 0, 0.4);
   margin: 10px auto;
   font-family: Raleway;
   color:white;
@@ -11,6 +10,7 @@
 }
 
 .h1 {
+  float:center;
   text-align: center;
   font-size: 2em;
 }
@@ -29,9 +29,7 @@ input.invalid {
 }
 
 /* Hide all steps by default: */
-.tab {
-  display: none;
-}
+
 
 button {
   background-color: #4CAF50;
@@ -65,17 +63,7 @@ button:hover {
     padding-bottom: 5px;
 }
 
-body {
-  margin: 0;
-  font-family: Arial;
-  font-size: 17px;
-}
 
-.container {
-  position: relative;
-  max-width: 8000px;
-  margin: 0 auto;
-}
 
 /* Make the image responsive */
 .container img {
@@ -84,7 +72,7 @@ body {
 }
 
 /* Style the button and place it in the middle of the container/image */
-.container .btn {
+.container-fluid .btn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -99,13 +87,13 @@ body {
   border-radius: 5px;
 }
 
-.container .btn:hover {
+.container-fluid .btn:hover {
   background-color: black;
 }
-.container img {vertical-align: middle;}
+.container-fluid img {vertical-align: middle;}
 
-.container .content {
-  position: absolute;
+.content {
+  position: relative;
   top: 0;
   background: rgb(0, 0, 0); /* Fallback color */
   background: rgba(0, 0, 0, 0.4); /* Black background with 0.5 opacity */
@@ -115,7 +103,6 @@ body {
 }
 .container-1{
   width: 300px;
-  vertical-align: middle;
   position: relative;
 }
 .container-1 input#search{
@@ -148,7 +135,6 @@ body {
 }
   
 .container-1 .icon{
-  position: absolute;
   top: 0;
   margin-left: 17px;
   margin-top: 17px;

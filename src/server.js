@@ -1,13 +1,13 @@
 // server.js
 // load the things we need
 var express = require('express');
-var app = express();
 var bodyParser = require('body-parser');
-
-
+// var cookieSession = require('cookie-session');
+var multer = require('multer'); // v1.0.5
+var upload = multer();
+var app = express();
 // set the view engine to ejs
 app.set('view engine', 'ejs');
-
 // use res.render to load up an ejs view file
 
 // configure app to use bodyParser()
@@ -19,19 +19,12 @@ app.use(express.static('public'));
 var fs = require('fs');
 var file = './public/allergysource.json';
 var allergy_source = JSON.parse(fs.readFileSync(file));
-
 var port = process.env.PORT || 8080; // set our port
 
 
 
 // index page 
 app.get('/', function(req, res) {
-    // var drinks = [
-    //     { name: 'Bloody Mary', drunkness: 3 },
-    //     { name: 'Martini', drunkness: 5 },
-    //     { name: 'Scotch', drunkness: 10 }
-    // ];
-    // var tagline = "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.";
     var allergies = [
         { name: 'milk' },
         { name: 'peanuts'},
@@ -49,9 +42,15 @@ app.get('/', function(req, res) {
 
 
 // maps page
-app.get('/maps', function(req, res) {
-
-    res.render('pages/maps');
+app.get('/maps', upload.none(), function(req, res) {
+    if(req.body) {
+        // console.log(req.body.data);
+        console.log(req.query.zipcode)
+        console.log(req.query.allergy);
+    }
+    res.render('pages/maps',{
+        zipcode: req.query.zipcode,
+    });
 
 });
 
@@ -111,6 +110,7 @@ app.get('/allergies', function(req, res){
 app.listen(port);
 console.log('AllergyFreePay is running on 8080...');
 
+// for testing data
 for (var i = allergy_source.length - 1; i >= 0; i--) {
     console.log(allergy_source[i].name);
     console.log(allergy_source[i].food_eg);
