@@ -1,22 +1,213 @@
 [
-    {
-        "rest_id": 01,
-        "name": "Mala",
-        "menu": [
-        {
-            "food_id": 01,
-            "name": "YangZhou Fried Rice",
-            "components": ["chicken", "beef", "egg"],
-            "price": 9.95
-        },
-        {
-        	"food_id":02,
-        	"name": "Lamb Mala Pot",
-        	"components": ["lamb", "mushroom","tofu", "rice noodles"],
-        	"price":9.95
-        }]
-	},
-	{
-		"rest_id":"",
-    	"name":
-}]
+  {
+    "rest_id": 01,
+    "name": "Mala",
+    "menu": [
+      {
+        "food_id": 01,
+        "name": "YangZhou Fried Rice",
+        "components": ["chicken", "beef", "egg"],
+        "price": 9.95
+      },
+      {
+        "food_id": 02,
+        "name": "Lamb Mala Pot",
+        "components": ["lamb", "mushroom", "tofu", "rice noodles"],
+        "price": 9.95
+      }
+    ]
+  },
+  {
+    "rest_id": 02,
+    "name": "McDonald's",
+    "menu": [
+      {
+        "food_id": 01,
+        "name": "Big Mac",
+        "components": ["beef", "onion", "egg", "cheese"],
+        "price": 5.35
+      },
+      {
+        "food_id": 02,
+        "name": "Chicken Tender",
+        "components": ["chicken", "flour", "season", "egg"],
+        "price": 4.95
+      },
+      {
+        "food_id": 03,
+        "name": "Fries",
+        "components": ["peanut", "peanut oil", "potato"],
+        "price": 2.1
+      }
+    ]
+  },
+  {
+    "rest_id": 03,
+    "name": "OTTO",
+    "menu": [
+      {
+        "food_id": 01,
+        "name": "OTTO Four Cheese",
+        "components": ["cheese", "tomato", "flour"],
+        "price": 13.5
+      },
+      {
+        "food_id": 02,
+        "name": "Greek",
+        "components": ["romaine", "kale", "cheese", "pepper", "croutons"],
+        "price": 6
+      }
+    ]
+  },
+  {
+    "rest_id": 04,
+    "name": "FIVE GUYS",
+    "menu": [
+      {
+        "food_id": 01,
+        "name": "Bacon Dog",
+        "components": ["bacon", "hot dog", "hamburger patty"],
+        "price": 2
+      },
+      {
+        "food_id": 02,
+        "name": "Bun",
+        "components": ["wheat", "soy", "milk", "egg"],
+        "price": 4
+      },
+      {
+        "food_id": 03,
+        "name": "Fries",
+        "components": ["peanut", "peanut oil", "potato"],
+        "price": 2.1
+      },
+      {
+        "food_id": 04,
+        "name": "Milk Shakes",
+        "components": ["peanut", "whipped cream"],
+        "price": 2.1
+      },
+      {
+        "food_id": 05,
+        "name": "Mix-Ins",
+        "components": ["peanut", "milk", "soy", "egg", "bacon", "cherry"],
+        "price": 2.1
+      }
+    ]
+  },
+  {
+    "rest_id": 05,
+    "name": "Legal SeaFood",
+    "menu": [
+      {
+        "food_id": 01,
+        "name": "Raw Oysters",
+        "components": ["oyster"],
+        "price": 10
+      },
+      {
+        "food_id": 02,
+        "name": "Rwa Clams",
+        "components": ["lettlenecks", "cherrystones"],
+        "price": 1.95
+      },
+      {
+        "food_id": 03,
+        "name": "Blackened Raw Tuna 'Sashimi'",
+        "components": ["lsesame chili vinaigrette", "seaweed salad", "wasabi"],
+        "price": 15.5
+      },
+      {
+        "food_id": 03,
+        "name": "Blackened Raw Tuna 'Sashimi'--steamer",
+        "components": [
+          "lsesame chili vinaigrette",
+          "seaweed salad",
+          "wasabi",
+          "butter"
+        ],
+        "price": 18.95
+      },
+      {
+        "food_id": 04,
+        "name": "Smoked Salmon",
+        "components": [
+          "mustard sauce",
+          "capers",
+          "onion",
+          "brioche toast points",
+          "salmon"
+        ],
+        "price": 14.96
+      },
+      {
+        "food_id": 05,
+        "name": "Steamed Lobsters",
+        "components": [
+          "potato",
+          "broccoli",
+          "lemon",
+          "garlic",
+          "shrimp",
+          "lobster"
+        ],
+        "price": 14.96
+      },
+      {
+        "food_id": 06,
+        "name": "Legal’s Signature Crab Cake",
+        "components": ["crab", "mustard sauce", "nuts"],
+        "price": 17.5
+      }
+    ]
+  },
+  {
+    "rest_id": 06,
+    "name": "Chipotle Mexican Grill",
+    "menu": [
+      {
+        "food_id": 01,
+        "name": "BURRITO",
+        "components": [
+          "chicken",
+          "beef",
+          "barbacoa",
+          "veggie",
+          "chorizo",
+          "sofritas",
+          "rice",
+          "black beans",
+          "soy",
+          "tomato",
+          "avacano",
+          "onion",
+          "cheese",
+          "chips"
+        ],
+        "price": 8.5
+      },
+      {
+        "food_id": 02,
+        "name": "Taco",
+        "components": [
+          "flour",
+          "chicken",
+          "beef",
+          "barbacoa",
+          "veggie",
+          "chorizo",
+          "sofritas",
+          "rice",
+          "black beans",
+          "soy",
+          "tomato",
+          "avacano",
+          "onion",
+          "cheese",
+          "chips"
+        ],
+        "price": 5.95
+      }
+    ]
+  }
+]
