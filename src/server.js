@@ -47,9 +47,10 @@ app.get('/maps', upload.none(), function(req, res) {
         // console.log(req.body.data);
         console.log(req.query.zipcode)
         console.log(req.query.allergy);
+        var zipcode = req.query.zipcode;
     }
     res.render('pages/maps',{
-        zipcode: req.query.zipcode,
+        zipcode: zipcode,
     });
 
 });
