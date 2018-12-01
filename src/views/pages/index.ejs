@@ -33,11 +33,46 @@
                         <input name="allergy" type="checkbox" value="egg">Eggs
                         <input name="allergy" type="checkbox" value="fish">Fish
                         <input name="allergy" type="checkbox" value="shellfish">Shellfish
-                        <input type="submit" name="" value="search">
+                        <input type="submit" name="" value="search" id="submit">
                     </div>
                 </form>
             </div>
         </div>
+        <script type="text/javascript">
+        var pos;
+        $(window).load(getLocation);
+        //add current position field in request parameters
+        $('#regForm').submit(function(event) {
+            alert(pos);
+            $('<input />').attr('type', 'hidden')
+                .attr('name', "position_lat")
+                .attr('value', pos.lat)
+                .appendTo('#regForm');
+            $('<input />').attr('type', 'hidden')
+                .attr('name', "position_lng")
+                .attr('value', pos.lng)
+                .appendTo('#regForm');
+            $('<input />').attr('type', 'hidden')
+                .attr('name', "position")
+                .attr('value', pos)
+                .appendTo('#regForm');
+            return true;
+        })
+
+        //get current position
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                });
+            } else {
+                console.log("hhh");
+            }
+        }
+        </script>
     </main>
     <footer>
         <% include ../partials/footer %>

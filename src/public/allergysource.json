@@ -1,6 +1,7 @@
 [
   {
     "name": "milk",
+    "reaction": "Sensitivity to cow’s milk varies from person to person, and reactions can be unpredictable. Symptoms of a milk allergy reaction can range from mild, such as hives, to severe, such as anaphylaxis.",
     "food_eg": [
       "butter",
       "buttermilk",
@@ -12,6 +13,7 @@
   },
   {
     "name": "peanut",
+    "reaction":"Peanuts can cause a severe, potentially life-threatening allergic reaction (anaphylaxis). Allergic reactions can be unpredictable, and even very small amounts of peanut can cause one.",
     "food_eg": [
       "artificial nuts",
       "beer nuts",
@@ -23,6 +25,7 @@
   },
   {
     "name": "fish",
+    "reaction":"Finned fish can cause severe and potentially life-threatening allergic reactions (such as anaphylaxis). Allergic reactions can be unpredictable, and even very small amounts of fish can cause one.",
     "food_eg": [
       "fish",
       "worcestershire sauce",
@@ -37,6 +40,7 @@
   },
   {
     "name": "tree nuts",
+    "reaction":"Tree nuts can cause a severe and potentially life-threatening allergic reaction (anaphylaxis). Allergic reactions can be unpredictable, and even very small amounts of tree nuts can cause one.",
     "food_eg": [
       "almonds",
       "brazil nuts",
@@ -49,6 +53,7 @@
   },
   {
     "name": "shellfish",
+    "reaction":"Shellfish can cause severe and potentially life-threatening allergic reactions (such as anaphylaxis). Allergic reactions can be unpredictable, and even very small amounts of shellfish can cause one.",
     "food_eg": [
       "barnacle",
       "crab",
@@ -61,6 +66,7 @@
   },
   {
     "name": "soy",
+    "reaction":"Allergic reactions to soy are typically mild, but all reactions can be unpredictable. Although rare, severe and potentially life-threatening reactions can also occur.",
     "food_eg": [
       "tofu",
       "beer nuts",
@@ -74,10 +80,12 @@
   },
   {
     "name": "eggs",
+    "reaction":"Symptoms of an egg allergy reaction can range from mild, such as hives, to severe, such as anaphylaxis. Allergic reactions can be unpredictable, and even very small amounts of egg can cause one.",
     "food_eg": ["egg"]
   },
   {
     "name": "gluten",
+    "reaction":"Symptoms of a gluten allergy reaction can range from mild, such as hives, to severe, such as anaphylaxis. Allergic reactions can be unpredictable, and even very small amounts of wheat can cause one.",
     "food_eg": [
       "flour",
       "Wheat",

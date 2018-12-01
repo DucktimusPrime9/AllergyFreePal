@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container-fluid" background="/food.jpg">
+    <header>
+        <% include ../partials/header %>
+    </header>
+    <main>
+        <div class="bgimg-1">
+            <div class="caption">
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="box">
+            </div>
+            <div class="content">
+                <h1>Allergy Free Pal</h1>
+                <p>Bored of eating at home? Want to go out to eat with friends but unsure of where to go? Never fear, Allergy Free Pal is here! Allergy Free Pal is an allergy friendly restaurant finder that will give you a list of restaurants to choose from based on your allergies. </p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="accordion" id="accordionAllergy">
+                        <% allergysources.forEach(function(allergy) { %>
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link allergy-card" type="button" data-toggle="collapse" data-target="#collapse<%= allergy.name%>" aria-expanded="true" aria-controls="collapse<%= allergy.name%>" id="<%= allergy.name%>">
+                                      <%= allergy.name %>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapse<%= allergy.name%>" class="collapse" aria-labelledby="headingOne" data-parent="#accordionAllergy">
+                                <div class="card-body">
+                                    <%= allergy.reaction %>
+                                </div>
+                            </div>
+                        </div>
+                        <% }); %>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                $('.card-header').click(function() {
+                    $('.collapse').removeClass('show');
+                    $(this).next().addClass('collapsing');
+                    $(this).next().removeClass('collapsing');
+                    $(this).next().addClass('show');
+                });
+                
+                var foods;
+                $(".allergy-card").click(function() {
+                    var allergysource = $(this).attr('id');
+                    $.ajax({
+                        url: 'allergy',
+                        type: 'GET',
+                        data: {
+                            'allergy_name': allergysource,
+                        },
+                        dataType: "json",
+                        success: function(data) {
+                            // var foods = JSON.parse(data);
+                            // console.log(data);
+                            $('.list-group').empty();
+                            data.forEach(function(food) {
+                                console.log(food);
+                                var ele = '<li class="list-group-item">' + food + '</li>';
+                                $('.list-group').append(ele);
+                            });
+
+
+                        },
+                        error: function(request, error) {
+                            alert("Error!");
+                        }
+                    });
+                });
+                </script>
+                <div class="col-md-8">
+                    <div class="card" style="width: 18rem;" id="food_sample">
+                        <ul class="list-group list-group-flush">
+                        </ul>
+                    </div>
+                    <!-- click right side and get detail in left side -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+</body>
+
+</html>

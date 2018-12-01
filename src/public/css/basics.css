@@ -34,7 +34,7 @@ input.invalid {
 /* Hide all steps by default: */
 
 
-button {
+/*button {
   background-color: #4CAF50;
   color: #ffffff;
   border: none;
@@ -46,7 +46,7 @@ button {
 
 button:hover {
   opacity: 0.8;
-}
+}*/
   
 .verticalcenter
   {
@@ -75,7 +75,7 @@ button:hover {
 }
 
 /* Style the button and place it in the middle of the container/image */
-.container-fluid .btn {
+/*.container-fluid .btn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -92,7 +92,7 @@ button:hover {
 
 .container-fluid .btn:hover {
   background-color: black;
-}
+}*/
 .container-fluid img {vertical-align: middle;}
 
 .content {

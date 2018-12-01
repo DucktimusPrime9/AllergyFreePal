@@ -5,7 +5,7 @@
     <% include ../partials/head %>
     <style>
     #map {
-        width: 500px;
+        width: 1000px;
         height: 500px;
         float: right;
         position: relative;
@@ -18,7 +18,13 @@
         <% include ../partials/header %>
     </header>
     <main>
-        <div id="map"></div>
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-6 offset-md-2">
+                <div id="map"></div>
+            </div>
+        </div>
         <script>
         // Note: This example requires that you consent to location sharing when
         // prompted by your browser. If you see the error "The Geolocation service
@@ -26,11 +32,14 @@
         // locate you.
         var zipcode = "<%= zipcode%>";
         console.log("current zipcode is:" + zipcode);
+        var lat = "<%= lat %>" - 0;
+        var lng = "<%= lng %>" - 0;
+        console.log(lat);
+        var map, infoWindow, pos;
 
-        var map, infoWindow;
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 42.349194, lng: -71.097855 },
+                center: { lat: lat, lng: lng },
                 zoom: 15
             });
 
@@ -39,14 +48,35 @@
             // Try HTML5 geolocation.
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
-                    var pos = {
+                    pos = {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
                     };
+                    //output current location
+                    console.log(JSON.stringify(pos));
                     infoWindow.setPosition(pos);
-                    infoWindow.setContent('Location found.');
+                    infoWindow.setContent('You are here!');
                     infoWindow.open(map);
                     map.setCenter(pos);
+                    
+                    //get restaurant info from google map API
+                    $.ajax({
+                        url: 'maps',
+                        type: 'POST',
+                        data: {
+                            'position': pos,
+                        },
+                        dataType: "json",
+                        success: function() {
+                            // var foods = JSON.parse(data);
+                            console.log(JSON.stringify(pos));
+
+
+                        },
+                        error: function(request, error) {
+                            alert("Error!");
+                        }
+                    });
                 }, function() {
                     handleLocationError(true, infoWindow, map.getCenter());
                 });
