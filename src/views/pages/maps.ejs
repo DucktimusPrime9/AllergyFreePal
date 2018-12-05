@@ -93,10 +93,23 @@
                                 var location = result.geometry.location;
                                 var intro = result.intro;
                                 var rating = result.rating;
+                                var offering = result.offering;
                                 console.log(name);
                                 console.log(location);
                                 var latLng = new google.maps.LatLng(location.lat, location.lng);
-                                var restaurant_card = '<div class="card border-light" mb-3><div class="card-header">' + 'recommend restaurant' + '</div><div class="card-body"><h5 class="card-title">' + name + '</h5><p class="card-text">' + intro + '</p></div></div>';
+                                var tags = "";
+                                offering.forEach(function(option) {
+                                    if (option == "seafood"||option=="fish"||option=="shellsfish") {
+                                        tags = tags + '<button type="button" class="btn btn-outline-warning">' + option + '</button>';
+                                    }else if(option =="eggs"||option =="egg"){
+                                        tags = tags +'<button type="button" class="btn btn-outline-danger">'+option+'</button>'
+                                    }else if(option =="gluten"){
+                                        tags = tags +'<button type="button" class="btn btn-outline-danger">'+option+'</button>'
+                                    } else {
+                                        tags = tags + '<button type="button" class="btn btn-outline-success">' + option + '</button>';
+                                    }
+                                })
+                                var restaurant_card = '<div class="card border-light" mb-3><div class="card-header">' + tags + '</div><div class="card-body"><h5 class="card-title">' + name + '</h5><p class="card-text">' + intro + '</p></div></div>';
                                 var infowindow = new google.maps.InfoWindow({
                                     content: restaurant_card
                                 });

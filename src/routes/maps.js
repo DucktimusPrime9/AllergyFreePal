@@ -13,7 +13,7 @@ var adding_info = JSON.parse(fs.readFileSync(file));
 
 
 router.get('/', function(req, res) {
-    if (req.body) {
+    if (req.query) {
         // console.log(req.body.data);
         console.log(req.query.zipcode);
         console.log(req.query.allergy);

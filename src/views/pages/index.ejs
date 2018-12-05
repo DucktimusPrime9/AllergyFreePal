@@ -22,7 +22,7 @@
         </div>
         <div class="row">
             <div class="col-md-4 offset-md-4">
-                <form id="regForm" action="/maps" method="GET" enctype="multipart/form-data">
+                <form id="regForm" action="/maps" method="GET" enctype="multipart/form-data"> 
                     <div class="h1">Restaurant Finder</div>
                     <div class="subtitle">Find allergy-friendly</div>
                     <span class="subtitle">restaurants near you!</span>
@@ -68,7 +68,7 @@
         //add current position field in request parameters
         $('#regForm').submit(function(event) {
             //output current position
-            alert(JSON.stringify(pos));
+            // alert(JSON.stringify(pos));
             $('<input />').attr('type', 'hidden')
                 .attr('name', "position_lat")
                 .attr('value', pos.lat)
@@ -93,7 +93,7 @@
                         lng: position.coords.longitude
                     };
                 });
-                alert('We got your Location!')
+                alert('GPS works!')
             } else {
                 console.log("hhh");
             }
