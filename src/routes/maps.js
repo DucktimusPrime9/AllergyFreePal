@@ -2,8 +2,15 @@ var express = require('express'),
     router = express.Router()
 
 const googleMapsClient = require('@google/maps').createClient({
-    key: 'AIzaSyDglInf1mZbMmHuhhJIHbsphj5GxiiopHg'
+    key: 'AIzaSyBJiO-3HoqtE1E5KTSzeQp1Xut9epGkAlQ'
 });
+
+
+
+var fs = require('fs');
+var file = './public/adding_data.json';
+var adding_info = JSON.parse(fs.readFileSync(file));
+
 
 router.get('/', function(req, res) {
     if (req.body) {
@@ -12,10 +19,12 @@ router.get('/', function(req, res) {
         console.log(req.query.allergy);
         console.log(req.query.position_lat);
         console.log(req.query.position_lng);
-        console.log(req.query.position);
+        // console.log(JSON.stringify(req.query.position)); 
         var zipcode = req.query.zipcode;
-        var lat = req.query.position_lat;
-        var lng = req.query.position_lng;
+        // var lat = req.query.position_lat;
+        // var lng = req.query.position_lng;
+        var lat = 42.349417;
+        var lng = -71.0980979;
 
     }
     res.render('pages/maps', {
@@ -26,18 +35,33 @@ router.get('/', function(req, res) {
 })
 //
 router.post('/', function(req, res) {
-    if (req.query) {
-        var position = req.query.position;
-        console.log(JSON.stringify(req.query.position));
-        googleMapsClient.palcesNearby({
+    if (req.body) {
+
+        //get nearby restaurant from google map api
+        console.log("latitude:" + req.body.lat + ", longitude:" + req.body.lat);
+
+        googleMapsClient.placesNearby({
             location: {
-                lat: position.lat,
-                lng: position.lng,
+                lat: 42.349417,
+                lng: -71.0980979,
             },
+            rankby: 'distance',
             type: "restaurant",
+
         }, function(err, response) {
             if (!err) {
-                console.log(JSON.stringify(response.json.results, null, "\t"));
+                console.log("got position!");
+                var results = response.json.results;
+                for (var i = 0; i < results.length; i++) {
+                    results[i].intro = adding_info[i].intro;
+                    results[i].offering = adding_info[i].offering;
+                }
+                var msg = JSON.stringify(results, null, "\t");
+                console.log(msg);
+                res.send(msg);
+
+            } else {
+                console.log(err);
             }
         });
     }
@@ -45,13 +69,7 @@ router.post('/', function(req, res) {
 })
 
 
-// googleMapsClient.placesNearby({
-//   address: '1600 Amphitheatre Parkway, Mountain View, CA'
-// }, function(err, response) {
-//   if (!err) {
-//     console.log(JSON.stringify(response.json.results, null, "\t"));
-//   }
-// });
+
 
 
 

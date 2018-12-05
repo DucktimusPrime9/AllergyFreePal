@@ -9,6 +9,9 @@
 <body class="container-fluid" background="/food.jpg">
     <header>
         <% include ../partials/header %>
+        <script type="text/javascript">
+        $('.home a').addClass('active');
+        </script>
     </header>
     <main>
         <div class="box">
@@ -23,7 +26,7 @@
                     <div class="h1">Restaurant Finder</div>
                     <div class="subtitle">Find allergy-friendly</div>
                     <span class="subtitle">restaurants near you!</span>
-                    <input placeholder="Enter your zip code" oninput="this.className = ''" name="zipcode">
+                    <input placeholder="Enter your zip code if you can not use GPS" oninput="this.className = ''" name="zipcode">
                     <div class="col">
                         <input name="allergy" type="checkbox" value="gluten">Gluten
                         <input name="allergy" type="checkbox" value="peanuts">Peanuts
@@ -43,7 +46,8 @@
         $(window).load(getLocation);
         //add current position field in request parameters
         $('#regForm').submit(function(event) {
-            alert(pos);
+            //output current position
+            alert(JSON.stringify(pos));
             $('<input />').attr('type', 'hidden')
                 .attr('name', "position_lat")
                 .attr('value', pos.lat)
@@ -54,7 +58,7 @@
                 .appendTo('#regForm');
             $('<input />').attr('type', 'hidden')
                 .attr('name', "position")
-                .attr('value', pos)
+                .attr('value', JSON.stringify(pos))
                 .appendTo('#regForm');
             return true;
         })
@@ -68,6 +72,7 @@
                         lng: position.coords.longitude
                     };
                 });
+                alert('We got your Location!')
             } else {
                 console.log("hhh");
             }

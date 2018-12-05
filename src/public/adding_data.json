@@ -1,0 +1,81 @@
+[
+{
+    "intro": "campus dining hall, provide with comfort food, allergic patient friendly",
+    "offering": ["all you can eat", "vegetarian options"]
+},
+{
+    "intro": "American food restaurant, Great Food & Large Selection of Beers in the heart of Kenmore Square",
+    "offering": ["cheese", "diary", "seafood", "eggs"]
+},
+{
+    "intro": "Family-friendly chain serving Chicago-style pizza along with pasta, steaks & burgers.",
+    "offering": ["pizza", "cheese", "steak", "seafood", "gluten"]
+},
+{
+    "intro": "Louisiana - accented fast - food chain knownfor its spicy fried chicken, biscuits & sides.",
+    "offering": ["chicken", "seafood"]
+},
+{
+    "intro": "Modern cafe popular with a mostly student set for thin-crust pizzas, panini & pitchers of sangria.",
+    "offering": ["cheese", "seafood", "comfort food"]
+},
+{
+    "intro": "Classic, long-running fast-food chain known for its burgers, fries & shakes.",
+    "offering": ["chicken", "cheese", "coffee", "comfort food"]
+},
+{
+    "intro": "Mexican chain for counter-serve, custom burritos, tacos & more, including health-oriented options.",
+    "offering": ["taco", "cheese", "gluten", "soy"]
+},
+{
+    "intro": "Pints of Guinness chase burgers & bar grub at this relaxed Brit-style pub with board games & pool.",
+    "offering": ["burger", "beer", "alcohol", "seafood"]
+},
+{
+    "intro": "Long-running chain serving signature donuts, breakfast sandwiches & a variety of coffee drinks.",
+    "offering": ["cheese", "fish", "gluten"]
+},
+{
+    "intro": "Happening scene starring masterful cocktails & modern brasserie fare in a glamorous atmosphere.",
+    "offering": ["egg", "fish", "gluten", "milk"]
+},
+{
+    "intro": "Raucous, TV-packed sports bar with a long beer list, pub fare & views of Fenway from the patio.",
+    "offering": ["cheese", "gluten"]
+},
+{
+    "intro": "Modern light-filled Japanese haunt features large sushi list & bento boxes, plus beer, wine & sake.",
+    "offering": ["shellfish", "gluten", "soy"]
+},
+{
+    "intro": "Branch of a pizzeria chain offering 19-inch, 3-pound pies & specialty toppings, plus calzones.",
+    "offering": ["cheese", "fast food"]
+},
+{
+    "intro": "Casual hangout for traditional Korean fare, with party platters, sushi options & delivery.",
+    "offering": ["seafood", "soy", "gluten"]
+},
+{
+    "intro": "comfort food, quick-bite, casual",
+    "offering": []
+},
+{
+    "intro": "Local fast - food chain of burger & frappe joints focusing on fresh, homemade ingredients.",
+    "offering": ["gluten free option", "egg", "cheese"]
+},
+{
+    "intro": "comfort food, quick bite",
+    "offering": []
+},
+{
+    "intro": "Farm-fresh raw bar, imaginative cocktails & an extensive wine & beer list in sleek surrounds.",
+    "offering": ["shellfish", "fish", "gluten"]
+},
+{
+    "intro": "Farm-fresh raw bar, imaginative cocktails & an extensive wine & beer list in sleek surrounds.",
+    "offering": ["shellfish", "fish", "gluten"]
+},
+{
+    "intro": "Flagship Fenway location of local chain brewpubs serving craft microbrews & American eats.",
+    "offering": ["cheese", "gluten"]
+}]

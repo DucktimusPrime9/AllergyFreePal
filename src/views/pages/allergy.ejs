@@ -8,6 +8,9 @@
 <body class="container-fluid" background="/food.jpg">
     <header>
         <% include ../partials/header %>
+        <script type="text/javascript">
+        $('.allergies a').addClass('active');
+        </script>
     </header>
     <main>
         <div class="bgimg-1">
@@ -49,7 +52,7 @@
                     $(this).next().removeClass('collapsing');
                     $(this).next().addClass('show');
                 });
-                
+
                 var foods;
                 $(".allergy-card").click(function() {
                     var allergysource = $(this).attr('id');
