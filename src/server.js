@@ -23,26 +23,19 @@ app.use(require('./routes'));
 
 var port = process.env.PORT || 8080; // set our port
 
-//test google map api
-const googleMapsClient = require('@google/maps').createClient({
-    key: 'AIzaSyBJiO-3HoqtE1E5KTSzeQp1Xut9epGkAlQ'
-});
+// //test google map api
+// const googleMapsClient = require('@google/maps').createClient({
+//     key: 'AIzaSyBJiO-3HoqtE1E5KTSzeQp1Xut9epGkAlQ'
+// });
 
-//place search
+// // place search
 // googleMapsClient.findPlace({
 // 	input:"Kenmore Classroom Building",
 // 	inputtype: "textquery",
 // 	}, function(err, response) {
 //     if (!err) {
-//         // console.log(response.json.results);
 //         var results = response.json;
 //         console.log(JSON.stringify(results));
-//         // var i = 0;
-//         // results.forEach(function(result) {
-//         //     i++;
-//         //     console.log(i);
-//         //     console.log(result);
-//         // })
 //     } else {
 //         console.log(err);
 //     }

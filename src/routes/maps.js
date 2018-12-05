@@ -59,8 +59,9 @@ router.post('/', function(req, res) {
                     results[i].offering = adding_info[i].offering;
                 }
                 var msg = JSON.stringify(results, null, "\t");
-                console.log(msg);
+                // console.log(msg);
                 res.send(msg);
+                console.log("Sent nearby restaurant data...");
 
             } else {
                 console.log(err);
