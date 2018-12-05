@@ -52,6 +52,8 @@ router.post('/', function(req, res) {
             if (!err) {
                 console.log("got position!");
                 var results = response.json.results;
+
+                //add testing data into response
                 for (var i = 0; i < results.length; i++) {
                     results[i].intro = adding_info[i].intro;
                     results[i].offering = adding_info[i].offering;
